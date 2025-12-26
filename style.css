@@ -2,12 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 body {
   background: #0d0d0d;
   color: white;
+  scroll-behavior: smooth;
 }
 
 /* NAV */
@@ -15,9 +16,10 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 20px 40px;
-  background: #111;
+  background: rgba(17, 17, 17, 0.9);
   position: sticky;
   top: 0;
+  backdrop-filter: blur(6px);
 }
 
 nav h2 {
@@ -29,6 +31,7 @@ nav h2 {
   text-decoration: none;
   color: white;
   opacity: 0.8;
+  transition: opacity 0.3s;
 }
 
 .nav-links a:hover {
@@ -47,50 +50,75 @@ nav h2 {
 }
 
 .hero h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
+  font-size: 3.2rem;
+  margin-bottom: 15px;
 }
 
 .hero p {
-  max-width: 500px;
+  max-width: 520px;
   opacity: 0.8;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 /* BUTTON */
 .btn {
-  padding: 14px 30px;
+  padding: 14px 32px;
   background: #00ff88;
   color: black;
   font-weight: bold;
-  border-radius: 6px;
+  border-radius: 8px;
   text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,255,136,0.3);
 }
 
 /* PROGRAMS */
 .programs {
-  padding: 60px 20px;
+  padding: 70px 20px;
   text-align: center;
 }
 
 .cards {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  margin-top: 30px;
+  gap: 25px;
+  margin-top: 35px;
+  flex-wrap: wrap;
 }
 
 .card {
   background: #1a1a1a;
-  padding: 30px;
-  width: 200px;
-  border-radius: 10px;
+  padding: 35px;
+  width: 220px;
+  border-radius: 14px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.5);
 }
 
 /* ABOUT & CONTACT */
 .about, .contact {
-  padding: 60px 20px;
+  padding: 70px 20px;
   text-align: center;
   max-width: 700px;
   margin: auto;
+}
+
+/* SCROLL REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
