@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0d0d0d;
+  color: white;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: #111;
+  position: sticky;
+  top: 0;
+}
+
+nav h2 {
+  color: #00ff88;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  opacity: 0.8;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+}
+
+/* HERO */
+.hero {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  max-width: 500px;
+  opacity: 0.8;
+  margin-bottom: 25px;
+}
+
+/* BUTTON */
+.btn {
+  padding: 14px 30px;
+  background: #00ff88;
+  color: black;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+/* PROGRAMS */
+.programs {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.card {
+  background: #1a1a1a;
+  padding: 30px;
+  width: 200px;
+  border-radius: 10px;
+}
+
+/* ABOUT & CONTACT */
+.about, .contact {
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+}
